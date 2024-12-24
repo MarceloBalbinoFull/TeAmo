@@ -1,0 +1,102 @@
+/* Estilo global para o corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #aaceeb; /* Fundo azul */
+    font-family: Arial, sans-serif;
+    flex-direction: column; /* Para colocar o conteúdo e o rodapé um em cima do outro */
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+input {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ff4081;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f50057;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+.heart {
+    font-size: 40px;
+    color: #ffb3c6;
+    margin-top: 20px;
+    display: none;  /* Inicialmente escondido */
+    animation: pulse 1.5s infinite;
+}
+
+.sad-face {
+    font-size: 40px;
+    color: #ffb3c6;
+    margin-top: 20px;
+    display: none;  /* Inicialmente escondido */
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Removendo o conteúdo dos pseudo-elementos inicialmente */
+.form-container:before, .form-container:after {
+    content: '';
+}
+
+/* Rodapé (footer) */
+footer {
+    background-color: #1e88e5; /* Azul mais escuro para contraste */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
